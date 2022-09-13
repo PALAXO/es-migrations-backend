@@ -1,0 +1,37 @@
+{
+  "name": "es-migrations-backend",
+  "version": "1.0.0",
+  "main": "lib/Migrate.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "GLWTS",
+  "dependencies": {
+    "bunyan": "1.8.15",
+    "es-odm": "3.0.0",
+    "lodash": "4.17.21",
+    "nconf": "0.12.0",
+    "uuid": "9.0.0",
+    "oboe": "2.1.5"
+  },
+  "devDependencies": {
+    "chai": "4.3.6",
+    "chai-as-promised": "7.1.1",
+    "eslint": "8.23.1",
+    "eslint-plugin-mocha": "10.1.0",
+    "eslint-plugin-promise": "6.0.1",
+    "mocha": "10.0.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "description": "This is ES migration tool backend usable to update ES data/mapping/settings to the latest version.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PALAXO/es-migrations-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PALAXO/es-migrations-backend/issues"
+  },
+  "homepage": "https://github.com/PALAXO/es-migrations-backend#readme"
+}

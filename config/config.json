@@ -1,0 +1,88 @@
+{
+  "options": {
+    "limits": {
+      "bulk": {
+        "minSize": 10,
+        "defaultSize": 1000,
+        "maxSize": 10000
+      },
+      "queue": {
+        "minSize": 1,
+        "defaultSize": 5,
+        "maxSize": 20
+      },
+      "maxScriptChains": 2,
+      "maxIndexDeletes": 5
+    },
+    "optimizations": {
+      "restrictions": {
+        "replicas": true,
+        "refreshes": true
+      },
+      "targetBulkSize": {
+        "enabled": true,
+        "minMB": 10,
+        "defaultMB": 25,
+        "maxMB": 45,
+        "lowPassCoefficient": 0.8,
+        "sampleSize": 10
+      },
+      "dynamic": {
+        "persistent": false,
+        "limiting": true,
+        "limitingInterval": 3000,
+        "monitoring": false,
+        "monitoringInterval": 1000
+      },
+      "alwaysNewIndices": {
+        "bulk": false,
+        "script": false
+      }
+    },
+    "strict": {
+      "updates": false,
+      "types": false
+    },
+    "blockIndices": true
+  },
+  "backup": {
+    "onlyUsedIndices": true,
+    "backupInputIndices": true,
+    "location": "./es_backup",
+    "repository": "es-migrations-backup",
+    "snapshotPrefix": "migration"
+  },
+  "es": {
+    "scrollTimeout": "5m",
+    "correctSettings": true,
+    "retries":  {
+      "base": 2.0,
+      "maxRetries": 8
+    },
+    "checkIntervals": {
+      "snapshot": 2500,
+      "restore": 2500,
+      "task": 2500
+    }
+  },
+  "logs": {
+    "migrations": {
+      "name": "migrations",
+      "streams": [
+        {
+          "level": "info",
+          "type": "console"
+        }
+      ]
+    },
+    "elasticsearch": {
+      "name": "elasticsearch",
+      "streams": [
+        {
+          "level": "error",
+          "type": "console"
+        }
+      ]
+    }
+  }
+}

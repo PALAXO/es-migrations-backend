@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "lib": ["ES6"],
+        "target": "ES6",
+        "strict": true,
+        "outDir": "build",
+        "checkJs": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "types": ["node", "mocha", "jasmine"]
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}

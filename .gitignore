@@ -1,0 +1,7 @@
+# IntelliJ files
+.idea/
+es-migrations-backend.iml
+
+
+# External libraries
+node_modules/
