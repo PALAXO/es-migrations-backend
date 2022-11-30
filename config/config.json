@@ -53,7 +53,7 @@
     "snapshotPrefix": "migration"
   },
   "es": {
-    "scrollTimeout": "5m",
+    "scrollTimeoutSeconds": 600,
     "correctSettings": true,
     "retries":  {
       "base": 2.0,
