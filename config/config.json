@@ -24,7 +24,6 @@
         "minMB": 10,
         "defaultMB": 25,
         "maxMB": 45,
-        "lowPassCoefficient": 0.8,
         "sampleSize": 10
       },
       "dynamic": {
