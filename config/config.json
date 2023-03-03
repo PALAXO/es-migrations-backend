@@ -53,11 +53,11 @@
     "snapshotPrefix": "migration"
   },
   "es": {
-    "scrollTimeoutSeconds": 600,
+    "requestTimeoutSeconds": 900,
     "correctSettings": true,
     "retries":  {
       "base": 2.0,
-      "maxRetries": 8
+      "maxRetries": 10
     },
     "checkIntervals": {
       "snapshot": 2500,
