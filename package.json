@@ -1,6 +1,6 @@
 {
   "name": "es-migrations-backend",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "main": "lib/Migrate.js",
   "scripts": {},
   "keywords": [],
@@ -8,11 +8,11 @@
   "license": "GLWTS",
   "dependencies": {
     "bunyan": "1.8.15",
-    "es-odm": "5.0.0",
+    "es-odm": "5.0.1",
     "lodash": "4.17.21",
     "nconf": "0.12.0",
-    "uuid": "9.0.0",
-    "oboe": "2.1.5"
+    "stream-json": "1.7.5",
+    "uuid": "9.0.0"
   },
   "devDependencies": {
     "eslint": "8.35.0",
