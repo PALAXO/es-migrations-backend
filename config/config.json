@@ -1,15 +1,20 @@
 {
   "options": {
+    "maxSnapshotBytesPerSec": "1gb",
+    "parallelization": {
+      "targetProcesses": 2,
+      "targetWorkersToCPUs": 0.4,
+      "allowWorkersConcurrency": true,
+      "workerRAMLimitMiB": 1000
+    },
+    "parallelProcesses": 2,
+    "threads": 0.5,
+    "reportSeconds": 60,
     "limits": {
       "bulk": {
         "minSize": 10,
         "defaultSize": 1000,
         "maxSize": 10000
-      },
-      "queue": {
-        "minSize": 1,
-        "defaultSize": 5,
-        "maxSize": 20
       },
       "maxScriptChains": 2,
       "maxIndexDeletes": 5
@@ -21,26 +26,13 @@
       },
       "targetBulkSize": {
         "enabled": true,
-        "minMB": 10,
-        "defaultMB": 25,
-        "maxMB": 45,
+        "targetMB": 25,
         "sampleSize": 10
-      },
-      "dynamic": {
-        "persistent": false,
-        "limiting": true,
-        "limitingInterval": 3000,
-        "monitoring": false,
-        "monitoringInterval": 1000
       },
       "alwaysNewIndices": {
         "bulk": false,
         "script": false
       }
-    },
-    "strict": {
-      "updates": false,
-      "types": false
     },
     "blockIndices": true
   },
@@ -53,6 +45,8 @@
   },
   "es": {
     "requestTimeoutSeconds": 900,
+    "pingTimeoutSeconds": 90,
+    "maxRetries": 5,
     "correctSettings": true,
     "retries":  {
       "base": 2.0,
