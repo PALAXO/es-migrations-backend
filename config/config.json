@@ -2,13 +2,18 @@
   "options": {
     "maxSnapshotBytesPerSec": "1gb",
     "parallelization": {
-      "targetProcesses": 2,
-      "targetWorkersToCPUs": 0.4,
-      "allowWorkersConcurrency": true,
-      "workerRAMLimitMiB": 1000
+      "processes": 2,
+      "process": {
+        "workersPerESThread": 0.5,
+        "heapPerESThreadGiB": 1,
+        "ramPerWorkerGiB": 1.5,
+        "workerThreadConcurrency": 2,
+        "maximumESLoad": 1,
+        "maximumTotalLoad": 1.25,
+        "hostLoadExponent": 0.1,
+        "nodesLoadExponent": 0.25
+      }
     },
-    "parallelProcesses": 2,
-    "threads": 0.5,
     "reportSeconds": 60,
     "limits": {
       "bulk": {
@@ -20,14 +25,10 @@
       "maxIndexDeletes": 5
     },
     "optimizations": {
-      "restrictions": {
-        "replicas": true,
-        "refreshes": true
-      },
       "targetBulkSize": {
         "enabled": true,
         "targetMB": 25,
-        "sampleSize": 10
+        "sampleSize": 25
       },
       "alwaysNewIndices": {
         "bulk": false,
