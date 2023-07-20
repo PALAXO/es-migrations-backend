@@ -1,46 +1,39 @@
 {
   "options": {
+    "maxSnapshotBytesPerSec": "1gb",
+    "parallelization": {
+      "processes": 2,
+      "process": {
+        "workersPerESThread": 0.5,
+        "heapPerESThreadGiB": 1,
+        "ramPerWorkerGiB": 1.5,
+        "workerThreadConcurrency": 2,
+        "maximumESLoad": 1,
+        "maximumTotalLoad": 1.25,
+        "hostLoadExponent": 0.1,
+        "nodesLoadExponent": 0.25
+      }
+    },
+    "reportSeconds": 60,
     "limits": {
       "bulk": {
         "minSize": 10,
         "defaultSize": 1000,
         "maxSize": 10000
       },
-      "queue": {
-        "minSize": 1,
-        "defaultSize": 5,
-        "maxSize": 20
-      },
       "maxScriptChains": 2,
       "maxIndexDeletes": 5
     },
     "optimizations": {
-      "restrictions": {
-        "replicas": true,
-        "refreshes": true
-      },
       "targetBulkSize": {
         "enabled": true,
-        "minMB": 10,
-        "defaultMB": 25,
-        "maxMB": 45,
-        "sampleSize": 10
-      },
-      "dynamic": {
-        "persistent": false,
-        "limiting": true,
-        "limitingInterval": 3000,
-        "monitoring": false,
-        "monitoringInterval": 1000
+        "targetMB": 25,
+        "sampleSize": 25
       },
       "alwaysNewIndices": {
         "bulk": false,
         "script": false
       }
-    },
-    "strict": {
-      "updates": false,
-      "types": false
     },
     "blockIndices": true
   },
@@ -53,6 +46,8 @@
   },
   "es": {
     "requestTimeoutSeconds": 900,
+    "pingTimeoutSeconds": 90,
+    "maxRetries": 5,
     "correctSettings": true,
     "retries":  {
       "base": 2.0,
