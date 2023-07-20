@@ -1,6 +1,6 @@
 {
   "name": "es-migrations-backend",
-  "version": "2.2.0-rc.1",
+  "version": "2.2.0-rc.2",
   "main": "lib/Migrate.js",
   "scripts": {},
   "keywords": [],
@@ -15,7 +15,7 @@
     "uuid": "9.0.0"
   },
   "devDependencies": {
-    "eslint": "8.43.0",
+    "eslint": "8.45.0",
     "eslint-plugin-mocha": "10.1.0",
     "eslint-plugin-promise": "6.1.1"
   },
