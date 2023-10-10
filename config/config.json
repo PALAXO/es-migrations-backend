@@ -4,14 +4,14 @@
     "parallelization": {
       "processes": 2,
       "process": {
-        "workersPerESThread": 0.5,
+        "workersPerESThread": 0.75,
         "heapPerESThreadGiB": 1,
         "ramPerWorkerGiB": 1.5,
         "workerThreadConcurrency": 2,
         "maximumESLoad": 1,
-        "maximumTotalLoad": 1.25,
+        "maximumTotalLoad": 1.5,
         "hostLoadExponent": 0.1,
-        "nodesLoadExponent": 0.25
+        "nodesLoadExponent": 0.15
       }
     },
     "reportSeconds": 60,
