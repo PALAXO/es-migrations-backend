@@ -62,6 +62,10 @@
       "snapshot": 2500,
       "restore": 2500,
       "task": 2500
+    },
+    "restore": {
+      "maxRetries": 3,
+      "waitTime": 30000
     }
   },
   "logs": {
