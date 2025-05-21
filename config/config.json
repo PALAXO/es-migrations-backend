@@ -29,7 +29,10 @@
         "script": false
       }
     },
-    "blockIndices": true
+    "blockIndices": {
+      "read": false,
+      "write": true
+    }
   },
   "backup": {
     "onlyUsedIndices": true,
