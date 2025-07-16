@@ -1,6 +1,6 @@
 {
   "name": "es-migrations-backend",
-  "version": "2.2.14",
+  "version": "2.2.15",
   "main": "lib/Migrate.js",
   "scripts": {},
   "keywords": [],
