@@ -5,7 +5,15 @@
       "processes": 2,
       "process": {
         "workerThreadConcurrency": 3,
-        "defaultNodeThreads": 8
+        "workersPerESThread": 1,
+        "ramPerESThreadGiB": 1,
+        "ramPerWorkerGiB": 1,
+        "maximumTotalLoad": 1.75,
+        "hostLoadExponent": 0.1,
+        "nodesLoadExponent": 0.2,
+        "defaultNodeThreads": 8,
+        "defaultNodeRamGiB": 12,
+        "maximumESLoad": 1
       }
     },
     "reportSeconds": 60,
