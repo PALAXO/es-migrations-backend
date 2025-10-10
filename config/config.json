@@ -50,7 +50,7 @@
     "snapshotPrefix": "migration"
   },
   "es": {
-    "requestTimeoutSeconds": 900,
+    "requestTimeoutSeconds": 7200,
     "pingTimeoutSeconds": 90,
     "maxRetries": 5,
     "correctSettings": true,
