@@ -1,9 +1,7 @@
-'use strict';
-
-const nconf = require(`nconf`);
+import nconf from 'nconf';
 
 nconf.env();
 nconf.argv();
-nconf.file(`conf`, { file: `${__dirname}/config.json` });
+nconf.file(`conf`, { file: `${import.meta.dirname}/config.json` });
 
-module.exports = nconf;
+export default nconf;

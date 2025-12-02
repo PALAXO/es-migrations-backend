@@ -1,34 +1,34 @@
 {
   "name": "es-migrations-backend",
-  "version": "2.3.2",
-  "main": "lib/Migrate.js",
-  "scripts": {},
+  "version": "3.0.0",
+  "description": "This is ES migration tool backend usable to update ES data/mapping/settings to the latest version.",
+  "type": "module",
   "keywords": [],
-  "author": "",
-  "license": "GLWTS",
-  "dependencies": {
-    "bunyan": "1.8.15",
-    "es-odm": "6.3.1",
-    "lodash": "4.17.21",
-    "nconf": "0.12.1",
-    "stream-json": "1.8.0",
-    "uuid": "9.0.1"
-  },
-  "devDependencies": {
-    "eslint": "8.57.0",
-    "eslint-plugin-mocha": "10.4.3",
-    "eslint-plugin-promise": "6.1.1"
-  },
+  "main": "lib/Migrate.js",
   "directories": {
     "lib": "lib"
   },
-  "description": "This is ES migration tool backend usable to update ES data/mapping/settings to the latest version.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PALAXO/es-migrations-backend.git"
   },
-  "bugs": {
-    "url": "https://github.com/PALAXO/es-migrations-backend/issues"
+  "homepage": "https://github.com/PALAXO/es-migrations-backend#readme",
+  "license": "GLWTS",
+  "scripts": {},
+  "dependencies": {
+    "bunyan": "1.8.15",
+    "es-odm": "7.0.0",
+    "lodash": "4.17.21",
+    "nconf": "0.13.0",
+    "stream-json": "1.9.1",
+    "uuid": "13.0.0"
   },
-  "homepage": "https://github.com/PALAXO/es-migrations-backend#readme"
+  "devDependencies": {
+    "@eslint/eslintrc": "3.3.3",
+    "@eslint/js": "9.39.1",
+    "@stylistic/eslint-plugin-js": "4.4.1",
+    "eslint": "9.39.1",
+    "eslint-plugin-jsdoc": "61.4.1",
+    "eslint-plugin-promise": "7.2.1"
+  }
 }
